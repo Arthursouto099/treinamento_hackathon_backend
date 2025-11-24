@@ -10,7 +10,7 @@ export type sangue = "A+" | "A-" | "B+" | "B-" | "AB+" | "AB-" | "O+" | "O-";
   @Column({ nullable: false, length: 100 })
   nome: string;
 
-  @Column({ nullable: false, length: 100, unique: true })
+  @Column({ nullable: false, length:11, unique: true })
   cpf: string;
 
   @Column({ nullable: false })
@@ -19,7 +19,7 @@ export type sangue = "A+" | "A-" | "B+" | "B-" | "AB+" | "AB-" | "O+" | "O-";
   @Column({ nullable: false })
   peso: number;
 
-  @Column({ nullable: false, length: 3 })
+  @Column({type: "varchar", nullable: false, length: 3 })
   tipo_sanguineo: sangue;
 
   @Column({ nullable: false })
