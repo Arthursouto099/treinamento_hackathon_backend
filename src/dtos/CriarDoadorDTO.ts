@@ -1,6 +1,6 @@
 import { IsNotEmpty, Max, Min } from "class-validator";
 import { sangue, Doador } from "../entities/doador";
-export class DoadorDTO extends Doador {
+export class CriarDoadorDTO extends Doador {
   @IsNotEmpty({ message: "Nome deve estar presente" })
   nome: string;
 
