@@ -9,7 +9,7 @@ export class Doador {
   nome: string;
 
   @Column({ nullable: false, length: 100 })
-  senha: string;
+  cpf: string;
 
   @Column({ nullable: false })
   idade: number;
@@ -21,5 +21,5 @@ export class Doador {
   tipo_sanguineo: sangue;
 
   @Column({ nullable: false })
-  data_ultima_doação: Date;
+  data_ultima_doacao: Date;
 }

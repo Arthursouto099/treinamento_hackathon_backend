@@ -4,8 +4,8 @@ export class CriarDoadorDTO extends Doador {
   @IsNotEmpty({ message: "Nome deve estar presente" })
   nome: string;
 
-  @IsNotEmpty({ message: "Senha deve estar presente" })
-  senha: string;
+  @IsNotEmpty({ message: "CPF deve estar presente" })
+  cpf: string;
 
   @IsNotEmpty({ message: "Idade deve estar presente" })
   @Min(18, { message: "Doador deve ser maior de idade" })
@@ -20,5 +20,5 @@ export class CriarDoadorDTO extends Doador {
   tipo_sanguineo: sangue;
 
   @IsNotEmpty({ message: "Data da última doação deve estar presente" })
-  data_ultima_doação: Date;
+  data_ultima_doacao: Date;
 }
