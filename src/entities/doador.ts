@@ -1,20 +1,25 @@
-import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  BeforeInsert,
-  BeforeUpdate,
-  OneToMany,
-  ManyToMany,
-  ManyToOne,
-} from "typeorm";
+import { Entity, Column } from "typeorm";
 import bcrypt from "bcrypt";
 
+export type sangue = "A+" | "A-" | "B+" | "B-" | "AB+" | "AB-" | "O+" | "O-";
+
 @Entity("doador")
-export class Doador{
-    Nome:string
-Idade:number
-Peso:number
-Tipo_sanguíneo:string
-Data_ultima_doação:Date
+export class Doador {
+  @Column({ nullable: false, length: 100 })
+  nome: string;
+
+  @Column({ nullable: false, length: 100 })
+  senha: string;
+
+  @Column({ nullable: false })
+  idade: number;
+
+  @Column({ nullable: false })
+  peso: number;
+
+  @Column({ nullable: false, length: 3 })
+  tipo_sanguineo: sangue;
+
+  @Column({ nullable: false })
+  data_ultima_doação: Date;
 }
