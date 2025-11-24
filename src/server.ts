@@ -1,9 +1,12 @@
 import express, { Application, Request, Response, NextFunction } from "express";
 import { AppDataSource } from "./config/data-source";
+import cors from "cors";
 
 
 const app: Application = express();
 const PORT = Number(process.env.PORT_SERVER) || 3000;
+
+app.use(cors({ origin: "http://127.0.0.1:5500" }));
 
 app.use(express.json());
 
@@ -33,4 +36,4 @@ AppDataSource.initialize()
     app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
 
   })
-  .catch((err:any) => console.error("Erro ao conectar no banco:", err));
+  .catch((err: any) => console.error("Erro ao conectar no banco:", err));

@@ -2,6 +2,7 @@ import "reflect-metadata";
 import { DataSource } from "typeorm";
 import { config } from "dotenv";
 import Doador from "../entities/doador";
+import { Administrador } from "../entities/Administrador";
 
 config();
 
@@ -12,7 +13,7 @@ export const AppDataSource = new DataSource({
   username: process.env.USER_DB,
   password: process.env.PASSWORD_DB,
   database: process.env.DATABASE,
-  entities: [Doador],
+  entities: [Doador, Administrador],
   synchronize: true, //MUDAR PARA FINAL
   logging: true,
 });
