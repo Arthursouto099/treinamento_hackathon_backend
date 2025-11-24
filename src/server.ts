@@ -1,6 +1,5 @@
 import express, { Application, Request, Response, NextFunction } from "express";
 import { AppDataSource } from "./config/data-source";
-//import router from "./routes/routes";
 
 const app: Application = express();
 const PORT = Number(process.env.PORT_SERVER) || 3000;

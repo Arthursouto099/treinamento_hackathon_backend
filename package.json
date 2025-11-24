@@ -4,7 +4,8 @@
   "description": "A seguir preparei um **README organizado**, dividido em **duas grandes partes para duas pessoas** trabalharem separadamente no backend, mantendo toda a arquitetura MVC, autenticação JWT, validações e requisitos de segurança.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx ts-node-dev src/server.ts"
   },
   "repository": {
     "type": "git",
@@ -37,7 +38,9 @@
     "@types/express": "^5.0.5",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^24.10.1",
+    "@types/uuid": "^10.0.0",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "uuid": "^13.0.0"
   }
 }

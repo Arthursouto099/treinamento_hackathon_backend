@@ -20,3 +20,6 @@ export async function connect() {
     console.error("Erro ao conectar ao banco de dados:", error.stack);
   }
 }
+
+
+

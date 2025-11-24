@@ -1,14 +1,16 @@
-import { Entity, Column } from "typeorm";
-import bcrypt from "bcrypt";
-
+import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 export type sangue = "A+" | "A-" | "B+" | "B-" | "AB+" | "AB-" | "O+" | "O-";
 
 @Entity("doador")
-export class Doador {
+ class Doador {
+
+  @PrimaryGeneratedColumn("uuid")
+  id: string;
+
   @Column({ nullable: false, length: 100 })
   nome: string;
 
-  @Column({ nullable: false, length: 100 })
+  @Column({ nullable: false, length: 100, unique: true })
   cpf: string;
 
   @Column({ nullable: false })
@@ -23,3 +25,5 @@ export class Doador {
   @Column({ nullable: false })
   data_ultima_doacao: Date;
 }
+
+export default  Doador
